@@ -1,18 +1,18 @@
 <!DOCTYPE html>
-<html lang="pt-BR" class="scroll-smooth"> <head>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Psicobiologia e Ayahuasca</title>
+    <title>Psicobiologia e Ayahuasca - Giulia Camargo</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Merriweather:wght@300;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
     <script>
         tailwind.config = {
             theme: {
                 extend: {
                     fontFamily: {
                         sans: ['Inter', 'sans-serif'],
-                        serif: ['Merriweather', 'serif'],
                     },
                     colors: {
                         brand: {
@@ -33,8 +33,8 @@
         body {
             background-color: #F9F6F0;
             color: #2C3531;
+            font-family: 'Inter', sans-serif;
         }
-        /* Ajuste para o link não cair atrás do menu fixo */
         .scroll-mt-24 {
             scroll-margin-top: 6rem;
         }
@@ -45,6 +45,15 @@
             margin: auto;
             height: 350px;
         }
+        /* Efeito de Relevo nas Caixas */
+        .interactive-card {
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+        .interactive-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 30px rgba(44, 95, 45, 0.12);
+            border-color: #97BC62;
+        }
         .nav-link {
             transition: all 0.3s ease;
             border-bottom: 2px solid transparent;
@@ -52,10 +61,6 @@
         .nav-link:hover {
             color: #2C5F2D;
             border-bottom: 2px solid #2C5F2D;
-        }
-        .interactive-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 25px rgba(44, 95, 45, 0.15);
         }
     </style>
 </head>
@@ -66,80 +71,103 @@
             <div class="flex justify-between h-16 items-center">
                 <div class="flex-shrink-0 flex items-center">
                     <span class="text-2xl mr-2">&#x1F52C;</span>
-                    <span class="font-serif font-bold text-brand-primary text-xl">Psicobiologia Interativa</span>
+                    <span class="font-bold text-brand-primary text-xl">Psicobiologia Interativa</span>
                 </div>
                 <div class="hidden md:flex space-x-8">
-                    <a href="#intro" class="nav-link text-brand-text font-medium text-sm">A Profissão</a>
-                    <a href="#quimica" class="nav-link text-brand-text font-medium text-sm">O Mecanismo</a>
-                    <a href="#beneficios" class="nav-link text-brand-text font-medium text-sm">Aplicações Clínicas</a>
+                    <a href="#intro" class="nav-link text-brand-text font-medium text-sm">O Papel do Biomédico</a>
+                    <a href="#quimica" class="nav-link text-brand-text font-medium text-sm">Neuroquímica</a>
+                    <a href="#beneficios" class="nav-link text-brand-text font-medium text-sm">Benefícios</a>
                     <a href="#futuro" class="nav-link text-brand-text font-medium text-sm">Futuro</a>
                 </div>
             </div>
         </div>
     </nav>
 
-    <header class="bg-brand-primary text-white py-20 px-4 text-center mb-12">
+    <header class="bg-brand-primary text-white py-24 px-4 text-center mb-12">
         <div class="max-w-4xl mx-auto">
-            <h1 class="font-serif text-4xl md:text-5xl font-bold mb-6">A Fronteira Científica da Ayahuasca</h1>
-            <p class="text-xl md:text-2xl mb-8 opacity-90">Traduzindo conhecimento milenar em medicina baseada em evidências.</p>
-            <a href="#intro" class="inline-block bg-brand-accent text-white font-bold py-3 px-8 rounded-full shadow-lg hover:scale-105 transition">
-                Iniciar Exploração
+            <h1 class="text-4xl md:text-6xl font-extrabold mb-4 leading-tight">O Estudo da Ayahuasca como Fronteira Científica</h1>
+            <p class="text-lg md:text-xl mb-2 opacity-90 font-light">Psicobiologia na Biomedicina</p>
+            <div class="h-1 w-20 bg-brand-accent mx-auto mb-6"></div>
+            <p class="text-md font-medium text-brand-secondary mb-8">Por: Giulia Da Silva Camargo • Estudante de Biomedicina</p>
+            <a href="#intro" class="inline-block bg-brand-accent text-white font-bold py-4 px-10 rounded-full shadow-lg hover:brightness-110 transition-all hover:scale-105">
+                Iniciar Estudo de Caso
             </a>
         </div>
     </header>
 
-    <main class="max-w-7xl mx-auto px-4 space-y-24">
+    <main class="max-w-6xl mx-auto px-4 space-y-32">
+        
         <section id="intro" class="scroll-mt-24">
-            <h2 class="text-3xl font-serif font-bold text-brand-primary mb-6">O que é a Psicobiologia?</h2>
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-brand-primary mb-4">1. O que é a Psicobiologia na Biomedicina?</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">Entenda a diferença fundamental: o biomédico psicobiólogo foca nas bases biológicas e químicas do comportamento humano.</p>
+            </div>
+            
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div class="bg-white p-8 rounded-2xl shadow-md border-t-4 border-brand-primary">
-                    <div class="text-4xl mb-4">🧪</div>
-                    <h3 class="font-bold mb-2">Neuroquímica</h3>
-                    <p class="text-sm text-gray-600">Analisa como os neurotransmissores ditam emoções.</p>
+                <div class="interactive-card bg-white p-8 rounded-2xl shadow-sm border border-gray-100 border-t-4 border-brand-primary">
+                    <div class="text-4xl mb-4">🧠</div>
+                    <h3 class="font-bold text-xl mb-3 text-brand-primary">Neurotransmissores</h3>
+                    <p class="text-gray-600 text-sm leading-relaxed">Analisa como a química do cérebro e os hormônios ditam emoções, memória e consciência.</p>
                 </div>
-                <div class="bg-white p-8 rounded-2xl shadow-md border-t-4 border-brand-secondary">
-                    <div class="text-4xl mb-4">🌿</div>
-                    <h3 class="font-bold mb-2">Substâncias</h3>
-                    <p class="text-sm text-gray-600">Estuda a interação de plantas complexas no SNC.</p>
+                <div class="interactive-card bg-white p-8 rounded-2xl shadow-sm border border-gray-100 border-t-4 border-brand-secondary">
+                    <div class="text-4xl mb-4">💊</div>
+                    <h3 class="font-bold text-xl mb-3 text-brand-primary">Interação Química</h3>
+                    <p class="text-gray-600 text-sm leading-relaxed">Estuda como fármacos ou plantas (como a Ayahuasca) alteram a função do Sistema Nervoso Central.</p>
                 </div>
-                <div class="bg-white p-8 rounded-2xl shadow-md border-t-4 border-brand-accent">
+                <div class="interactive-card bg-white p-8 rounded-2xl shadow-sm border border-gray-100 border-t-4 border-brand-accent">
                     <div class="text-4xl mb-4">🔬</div>
-                    <h3 class="font-bold mb-2">Validação</h3>
-                    <p class="text-sm text-gray-600">Fornece base biológica para novos tratamentos.</p>
+                    <h3 class="font-bold text-xl mb-3 text-brand-primary">Validação</h3>
+                    <p class="text-gray-600 text-sm leading-relaxed">Realiza testes neuroquímicos e pesquisas de laboratório para validar tratamentos científicos.</p>
                 </div>
             </div>
         </section>
 
-        <section id="quimica" class="scroll-mt-24 bg-white rounded-3xl p-8 shadow-xl">
-            <h2 class="text-3xl font-serif font-bold text-brand-primary mb-8">A Lente da Psicobiologia</h2>
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-                <div class="space-y-4">
-                    <div class="p-4 bg-brand-bg rounded-lg border-l-4 border-brand-secondary">
-                        <h4 class="font-bold">Folhas (Psychotria viridis)</h4>
-                        <p class="text-sm">Contêm DMT, que expande a consciência.</p>
+        <section id="quimica" class="scroll-mt-24 bg-white rounded-[3rem] p-10 md:p-16 shadow-xl border border-gray-50">
+            <div class="flex flex-col lg:flex-row gap-16 items-center">
+                <div class="lg:w-1/2 space-y-8">
+                    <h2 class="text-3xl font-bold text-brand-primary">2. A Ayahuasca sob a Lente da Psicobiologia</h2>
+                    <p class="text-gray-700 leading-relaxed">Não olhamos apenas para o ritual, mas para o que acontece <strong>dentro dos neurônios</strong> através da sinergia entre duas plantas:</p>
+                    
+                    <div class="space-y-4">
+                        <div class="interactive-card p-5 bg-brand-bg rounded-xl border-l-8 border-brand-secondary shadow-sm">
+                            <h4 class="font-bold text-brand-primary">DMT (Psychotria viridis)</h4>
+                            <p class="text-sm text-gray-600 italic">"Molécula do espírito": Causa as visões e a expansão da consciência, sendo estruturalmente similar à serotonina.</p>
+                        </div>
+                        <div class="interactive-card p-5 bg-brand-bg rounded-xl border-l-8 border-brand-primary shadow-sm">
+                            <h4 class="font-bold text-brand-primary">Inibidores da MAO (Banisteriopsis caapi)</h4>
+                            <p class="text-sm text-gray-600">O cipó impede que o corpo destrua a DMT precocemente, permitindo que ela alcance o cérebro.</p>
+                        </div>
                     </div>
-                    <div class="p-4 bg-brand-bg rounded-lg border-l-4 border-brand-primary">
-                        <h4 class="font-bold">Cipó (Banisteriopsis caapi)</h4>
-                        <p class="text-sm">Inibidores da MAO que permitem a ação da DMT.</p>
+                    
+                    <div class="bg-brand-primary/5 p-6 rounded-2xl">
+                        <h4 class="font-bold text-brand-primary mb-2 italic">A Conexão com a Saúde Mental</h4>
+                        <p class="text-sm text-gray-700">A mistura "reconfigura" as redes neurais, permitindo que áreas do cérebro que normalmente não se comunicam iniciem um diálogo. É um verdadeiro <strong>"reset" biológico</strong>.</p>
                     </div>
                 </div>
-                <div class="chart-container">
-                    <canvas id="radarChart"></canvas>
+                <div class="lg:w-1/2 w-full text-center">
+                    <p class="text-xs font-bold text-brand-primary uppercase tracking-widest mb-4">Mapa de Atividade Cerebral</p>
+                    <div class="chart-container">
+                        <canvas id="radarChart"></canvas>
+                    </div>
                 </div>
             </div>
         </section>
 
         <section id="beneficios" class="scroll-mt-24">
-            <h2 class="text-3xl font-serif font-bold text-brand-primary mb-8">Como a Ayahuasca ajuda?</h2>
-            <div class="bg-white rounded-3xl shadow-xl overflow-hidden flex flex-col lg:flex-row">
-                <div class="w-full lg:w-1/3 bg-brand-bg p-6 space-y-4">
-                    <button id="btn-depressao" class="tab-btn w-full text-left px-6 py-4 rounded-xl font-bold bg-brand-primary text-white">1. Depressão</button>
-                    <button id="btn-vicios" class="tab-btn w-full text-left px-6 py-4 rounded-xl font-bold bg-white text-brand-primary border border-brand-primary">2. Vícios</button>
-                    <button id="btn-neuro" class="tab-btn w-full text-left px-6 py-4 rounded-xl font-bold bg-white text-brand-primary border border-brand-primary">3. Neuroplasticidade</button>
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-brand-primary mb-4">3. Como a Ayahuasca ajuda o Ser Humano?</h2>
+                <p class="text-gray-600">Três pilares fundamentais observados pela ciência moderna.</p>
+            </div>
+            
+            <div class="bg-white rounded-[2.5rem] shadow-2xl overflow-hidden flex flex-col lg:flex-row border border-gray-100">
+                <div class="w-full lg:w-1/3 bg-brand-bg/50 p-8 space-y-4 border-r border-gray-100">
+                    <button id="btn-depressao" class="tab-btn w-full text-left px-6 py-5 rounded-2xl font-bold transition-all shadow-sm bg-brand-primary text-white">1. Depressão e Ansiedade</button>
+                    <button id="btn-vicios" class="tab-btn w-full text-left px-6 py-5 rounded-2xl font-bold transition-all shadow-sm bg-white text-brand-primary hover:bg-brand-secondary/10">2. Tratamento de Vícios</button>
+                    <button id="btn-neuro" class="tab-btn w-full text-left px-6 py-5 rounded-2xl font-bold transition-all shadow-sm bg-white text-brand-primary hover:bg-brand-secondary/10">3. Neuroplasticidade</button>
                 </div>
-                <div class="w-full lg:w-2/3 p-10">
-                    <h3 id="benefit-title" class="text-2xl font-bold text-brand-primary mb-4">Redução da Depressão</h3>
-                    <p id="benefit-text" class="text-gray-700 mb-8">Efeitos antidepressivos rápidos em comparação a remédios comuns.</p>
+                <div class="w-full lg:w-2/3 p-8 md:p-12">
+                    <h3 id="benefit-title" class="text-2xl font-bold text-brand-primary mb-4">Redução da Depressão e Ansiedade</h3>
+                    <p id="benefit-text" class="text-gray-700 mb-8 leading-relaxed">Pesquisas mostram efeitos antidepressivos rápidos, agindo em receptores que remédios comuns demoram semanas para atingir.</p>
                     <div class="chart-container">
                         <canvas id="benefitsBarChart"></canvas>
                     </div>
@@ -148,76 +176,141 @@
         </section>
 
         <section id="futuro" class="scroll-mt-24">
-            <h2 class="text-3xl font-serif font-bold text-brand-primary mb-8 text-center">O Futuro</h2>
-            <div class="chart-container" style="height: 300px;">
-                <canvas id="futureDoughnutChart"></canvas>
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div class="order-2 lg:order-1">
+                    <h2 class="text-3xl font-bold text-brand-primary mb-6">4. O Biomédico e o Futuro da Pesquisa</h2>
+                    <ul class="space-y-6">
+                        <li class="interactive-card bg-white p-4 rounded-xl shadow-sm flex items-start">
+                            <span class="bg-brand-secondary text-white rounded-full p-2 mr-4 mt-1">✓</span>
+                            <div>
+                                <strong>Padronização:</strong> Criação de extratos seguros e controlados para uso em hospitais.
+                            </div>
+                        </li>
+                        <li class="interactive-card bg-white p-4 rounded-xl shadow-sm flex items-start">
+                            <span class="bg-brand-secondary text-white rounded-full p-2 mr-4 mt-1">✓</span>
+                            <div>
+                                <strong>Mapeamento Cerebral:</strong> Uso de exames de imagem para ver quais áreas "acendem" e "apagam".
+                            </div>
+                        </li>
+                        <li class="interactive-card bg-white p-4 rounded-xl shadow-sm flex items-start">
+                            <span class="bg-brand-secondary text-white rounded-full p-2 mr-4 mt-1">✓</span>
+                            <div>
+                                <strong>Microdosagem:</strong> Doses mínimas para tratar ansiedade diária sem efeitos alucinógenos.
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="order-1 lg:order-2 text-center bg-white p-10 rounded-3xl shadow-lg border border-gray-50">
+                    <h3 class="font-bold text-brand-primary mb-6">Frentes de Investigação Médica</h3>
+                    <div class="chart-container" style="height: 300px;">
+                        <canvas id="futureDoughnutChart"></canvas>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="bg-brand-primary text-white rounded-3xl p-10 shadow-2xl overflow-hidden relative">
+            <div class="absolute top-0 right-0 p-10 opacity-10 text-9xl">📖</div>
+            <h2 class="text-3xl font-bold mb-8 relative z-10">5. Referências e Fontes para Estudo</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 relative z-10">
+                <div class="bg-white/10 p-4 rounded-lg backdrop-blur-sm">
+                    <strong>Instituto ICICE:</strong> Referência mundial em plantas medicinais.
+                </div>
+                <div class="bg-white/10 p-4 rounded-lg backdrop-blur-sm">
+                    <strong>UFRN:</strong> Líder em pesquisas para depressão (Dráulio de Araújo).
+                </div>
+                <div class="bg-white/10 p-4 rounded-lg backdrop-blur-sm">
+                    <strong>USP Ribeirão Preto:</strong> Neurociência e farmacologia clínica.
+                </div>
+                <div class="bg-white/10 p-4 rounded-lg backdrop-blur-sm">
+                    <strong>CFBM:</strong> Atribuições legais da habilitação em Psicobiologia.
+                </div>
             </div>
         </section>
     </main>
 
+    <footer class="mt-24 border-t border-gray-200 pt-16 text-center">
+        <div class="max-w-3xl mx-auto px-4">
+            <p class="text-2xl font-serif italic text-brand-primary mb-6 leading-relaxed">
+                "A Psicobiologia permite ao biomédico traduzir a experiência subjetiva da Ayahuasca em dados biológicos... descobrindo novas chaves para tratar a mente humana."
+            </p>
+            <div class="h-px w-24 bg-brand-accent mx-auto mb-6"></div>
+            <p class="text-brand-text font-bold">Giulia Da Silva Camargo</p>
+            <p class="text-sm text-gray-500">Estudo de Caso: Biomedicina e Psicobiologia • 2026</p>
+        </div>
+    </footer>
+
     <script>
-        // Dados do App
         const appState = {
             benefits: {
                 depressao: {
                     title: "Redução da Depressão e Ansiedade",
-                    text: "Age em receptores cerebrais de forma muito mais rápida que ISRS comuns.",
-                    labels: ["Antidepressivo Comum", "Ayahuasca"],
-                    data: [6, 0.5],
+                    text: "Pesquisas mostram que a substância tem efeitos antidepressivos rápidos, agindo em receptores cerebrais que remédios comuns demoram semanas.",
+                    labels: ["Remédio Comum (Semanas)", "Ayahuasca (Horas)"],
+                    data: [100, 15],
                     bgColor: ['#D4A373', '#2C5F2D']
                 },
                 vicios: {
                     title: "Tratamento de Vícios",
-                    text: "Ajuda a reconfigurar o sistema de recompensa do cérebro.",
-                    labels: ["Sem Intervenção", "Terapia Psicobiológica"],
-                    data: [25, 80],
+                    text: "A Psicobiologia estuda como a Ayahuasca ajuda a 'quebrar' circuitos de recompensa viciados em álcool ou drogas.",
+                    labels: ["Controle de Impulsos", "Terapia Assistida"],
+                    data: [30, 85],
                     bgColor: ['#E07A5F', '#2C5F2D']
                 },
                 neuro: {
                     title: "Neuroplasticidade",
-                    text: "Estimula o crescimento de novos neurônios e conexões sinápticas.",
-                    labels: ["Estado Basal", "Pós Estímulo"],
-                    data: [100, 175],
+                    text: "Capacidade de criar novas conexões. Substâncias estimulam o crescimento de novos neurônios e fortalecem as sinapses.",
+                    labels: ["Cérebro Estático", "Cérebro em Plástico"],
+                    data: [40, 95],
                     bgColor: ['#97BC62', '#2C5F2D']
                 }
             }
         };
 
-        // Gráfico Radar
+        // Gráfico Radar (Atividade Cerebral)
         new Chart(document.getElementById('radarChart'), {
             type: 'radar',
             data: {
-                labels: ["Comunicação", "Piloto Automático", "Serotonina", "Neuroplasticidade", "Rigidez"],
+                labels: ["Comunicação Neural", "Piloto Automático", "Serotonina", "Neuroplasticidade", "Ansiedade"],
                 datasets: [
-                    { label: 'Basal', data: [30, 90, 40, 30, 85], borderColor: '#D4A373', backgroundColor: 'rgba(212, 163, 115, 0.2)' },
-                    { label: 'Sob Efeito', data: [95, 20, 85, 80, 15], borderColor: '#2C5F2D', backgroundColor: 'rgba(44, 95, 45, 0.2)' }
+                    { label: 'Estado Normal', data: [30, 90, 40, 20, 80], borderColor: '#D4A373', backgroundColor: 'rgba(212, 163, 115, 0.2)' },
+                    { label: 'Sob Efeito', data: [95, 10, 90, 85, 20], borderColor: '#2C5F2D', backgroundColor: 'rgba(44, 95, 45, 0.2)' }
                 ]
             },
-            options: { responsive: true, maintainAspectRatio: false }
+            options: { 
+                responsive: true, 
+                maintainAspectRatio: false,
+                scales: { r: { ticks: { display: false } } }
+            }
         });
 
-        // Gráfico de Barras (Dinâmico)
+        // Gráfico de Barras Dinâmico
         const ctxBar = document.getElementById('benefitsBarChart').getContext('2d');
         let benefitsChart = new Chart(ctxBar, {
             type: 'bar',
             data: {
                 labels: appState.benefits.depressao.labels,
-                datasets: [{ data: appState.benefits.depressao.data, backgroundColor: appState.benefits.depressao.bgColor }]
+                datasets: [{ 
+                    label: 'Tempo/Eficácia (Proporcional)',
+                    data: appState.benefits.depressao.data, 
+                    backgroundColor: appState.benefits.depressao.bgColor,
+                    borderRadius: 10
+                }]
             },
             options: { responsive: true, maintainAspectRatio: false }
         });
 
-        // Gráfico Rosca
+        // Gráfico Rosca (Futuro)
         new Chart(document.getElementById('futureDoughnutChart'), {
             type: 'doughnut',
             data: {
-                labels: ["Farmacêutica", "Imagem", "Microdosagem"],
-                datasets: [{ data: [45, 30, 25], backgroundColor: ['#2C5F2D', '#97BC62', '#D4A373'] }]
+                labels: ["Padronização", "Mapeamento", "Microdosagem"],
+                datasets: [{ data: [40, 35, 25], backgroundColor: ['#2C5F2D', '#97BC62', '#D4A373'] }]
             },
-            options: { responsive: true, maintainAspectRatio: false }
+            options: { responsive: true, maintainAspectRatio: false, cutout: '70%' }
         });
 
-        // Lógica de Troca de Abas
+        // Lógica de Abas
         function updateTabs(key) {
             const data = appState.benefits[key];
             document.getElementById('benefit-title').innerText = data.title;
@@ -227,14 +320,13 @@
             benefitsChart.data.datasets[0].backgroundColor = data.bgColor;
             benefitsChart.update();
 
-            // Estilo dos botões
             document.querySelectorAll('.tab-btn').forEach(btn => {
-                btn.classList.replace('bg-brand-primary', 'bg-white');
-                btn.classList.replace('text-white', 'text-brand-primary');
+                btn.classList.remove('bg-brand-primary', 'text-white');
+                btn.classList.add('bg-white', 'text-brand-primary');
             });
             const active = document.getElementById(`btn-${key}`);
-            active.classList.replace('bg-white', 'bg-brand-primary');
-            active.classList.replace('text-brand-primary', 'text-white');
+            active.classList.add('bg-brand-primary', 'text-white');
+            active.classList.remove('bg-white', 'text-brand-primary');
         }
 
         document.getElementById('btn-depressao').onclick = () => updateTabs('depressao');
